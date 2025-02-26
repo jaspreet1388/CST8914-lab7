@@ -28,20 +28,20 @@
     <body>
         <h1>Feedback form</h1>
     <form>
-      <!-- Grouped related fields using fieldset for better accessibility -->
+      <!-- Grouped related fields using fieldset for the better accessibility -->
       <fieldset>
         <legend>Basic information</legend>
         <div class="control">
-          <!-- Associated label with input using for attribute -->
+          <!-- Associated label with inputs being using for attributes -->
           <label for="name">Full name <span class="required">*</span></label>
           <!-- Added required attribute for validation -->
           <input id="name" name="name" type="text"/>
         </div>
         <div class="control">
-          <!-- Associated label with textarea using for attribute -->
+          <!-- Associated label with text area using for attributes -->
           <label for="biography">Biography <span class="required">*</span></label>
           <textarea id="biography" name="biography" type="text" aria-describedby="biodescribe"></textarea>
-          <!-- Added description for screen readers -->
+          <!-- Added description for the screen readers -->
           <span id="biodescribe">Include examples of your JavaScript skills.</span>
         </div>
       </fieldset>
@@ -50,7 +50,7 @@
       <fieldset>
         <legend>Gender<span class="required">*</span></legend>
         <div class="control">
-          <!-- Connected label to input using for attribute -->
+          <!-- Connected label to input using for the attributes -->
           <input id="gender_male" name="gender" type="radio" value="male"/>
           <label for="gender_male">Male</label>
         </div>
@@ -61,15 +61,15 @@
       </fieldset>
       
       <div class="control">
-        <!-- Connected label to checkbox using for attribute -->
+        <!-- Connected label to checkbox input using for the attribute -->
         <input id="accept_agbs" name="accept_agbs" type="checkbox" value="1"/>
         <label for="accept_agbs">I accept the terms and conditions<span class="required">*</span></label>
       </div>
       
       <div class="control">
-        <!-- Hidden input for validation tracking -->
+        <!-- Hidden input for validation of tracking -->
         <input name="validate" type="hidden" value="1" />
-        <!-- Added aria-label for screen reader users -->
+        <!-- Added aria-label for the screen reader users -->
         <input type="submit" value="Register" aria-label="Register button to submit the form"/>
       </div>
     </form>
