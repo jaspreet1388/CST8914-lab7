@@ -67,9 +67,9 @@
       </div>
       
       <div class="control">
-        <!-- Hidden input for validation tracking -->
+        <!--  hidden input for validation tracking -->
         <input name="validate" type="hidden" value="1" />
-        <!-- Added aria-label for screen reader users -->
+        <!-- Added aria-label for the screen reader users -->
         <input type="submit" value="Register" aria-label="Register button to submit the form"/>
       </div>
     </form>
@@ -118,11 +118,11 @@
             return e.preventDefault();
           });
       
-          // Set aria-describedby attribute for accessibility
+          // Set aria-described by the attribute for accessibility of page
           $elementToDescribe.attr('aria-describedby', input + '_description');
           $errorContainer.append('<li>').find('li:last').append($error);
       
-          // Move focus to the error container if no other elements are focused
+          // Move the focus to the error container if no other elements are focused
           if ($(':not(form):focus').length === 0) {
             $errorContainer.focus();
           }
@@ -140,7 +140,7 @@
         }
       };
       
-      // Run validation on page load if validate parameter is present
+      // Run validation on the page load if the validation parameter is present
       $(document).ready(function () {
         if ($.urlParam('validate')) {
           validateInput('name', 'Please enter your name!');
