@@ -23,10 +23,22 @@ body {
 
 a{
   color: #006b3a;
+text-decoration: none;
 }
+
+  a:focus {
+      outline: 2px solid #006b3a; /* focus indicator*/
+      outline-offset: 2px;
+							   
+    }
 main a{
-  outline: none;
+  /* outline: none;  /* Remove outline */
 }
+
+    a:focus, button:focus {
+  outline: 2px solid #006b3a; /* focus added */
+  outline-offset: 2px;
+  }
 h2 {
   margin-top: 0;
 }
@@ -65,6 +77,8 @@ header {
 
 .menu {
   padding: 16px 48px;
+							   
+									
 }
 
 .menu a {
@@ -72,6 +86,8 @@ header {
   text-decoration: none;
   font-size: 18px;
   margin-right: 18px;
+					  
+									
 }
 
 .menu a:last-child {
@@ -80,6 +96,7 @@ header {
 
 .menu .btn-search img {
   vertical-align: top;
+					  
   margin-right: 8px;
   width: 22px;
   height: 22px;
@@ -101,6 +118,8 @@ article p {
 }
 
 .main-story .info {
+				  
+					   
   margin-right: 50%;
   padding-right: 16px;
 }
@@ -128,6 +147,13 @@ article p {
 
 .side-by-side article img {
   max-width: 100%;
+					   
+								
+						
+							
+				
+				  
+						  
 }
 
 .side-by-side .column:first-child {
@@ -143,10 +169,13 @@ article p {
 
 .side-by-side .column:last-child .headline {
   font-size: 18px;
+						  
+								   
 }
 
 .three-col {
   margin-bottom: 100px;
+																			 
 }
 
 .three-col h2,
@@ -162,6 +191,7 @@ article p {
 .three-col .columns article {
   flex: 1;
   margin-right: 18px;
+					  
 }
 
 .three-col img {
@@ -169,6 +199,7 @@ article p {
 }
 
 .three-col .columns article:last-child {
+			  
   margin-right: 0;
 }
 
@@ -189,10 +220,52 @@ article p {
 }
 
 /* Helpers */
+																			   
+	button {
+      background-color: #006b3a; /* Ensure button has a visible color */
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    button:focus {
+      outline: 2px solid #006b3a; /* Visible focus indicator for button */
+      outline-offset: 2px;
+    }
+														  
+				   
+				  
+					   
+				  
+								 
+					
+															  
+										
+	 
+
+					
+							
 .pull-right {
   float: right;
+
+			
+																		
+				   
+				   
+						 
+					  
 }
 
+				  
+																		  
+						  
+	 
+
+				 
+				 
+				   
+	 
   </style>
 </head>
 
@@ -206,7 +279,7 @@ article p {
       <nav class="menu">
         <a href="#">Home</a>
         <a href="#">Politics</a>
-        <a href="#" tabindex="-1">Business</a>
+        <a href="#">Business</a>  <!-- removed tabindex -->
         <a href="#">Entertainment</a>
         <a href="#">Sports</a>
         <a href="#" class="btn-search pull-right"><img src="https://raw.githubusercontent.com/udacity/ud891/2de2a0688c68809a3b453db3a24b1a59e8401459/lesson2-focus/02-dom-order/images/search.svg" alt="Search" />Search</a> 
@@ -214,14 +287,16 @@ article p {
       </nav>
     </div>
   </header>
+
   <div class="newsletter">
     <div class="container">
       <h3>Like the Funion? Consider joining our newsletter!</h3>
-      <input type="text">
-      <button type="button" onfocus="getFocus()">Sign up</button></div>
+      <input type="text" aria-label="Email for newsletter" placeholder="Enter your email"> <!-- added aria label-->
+      <button type="button" onclick="getFocus()">Sign up</button></button>
       
     </div>
   </div>
+
   <main class="container">
     <h2 class="offscreen">Top story</h2>
     <article class="main-story">
@@ -243,13 +318,13 @@ article p {
         </div>
         <article>
           <h3 class="headline">Bee wonders if maybe everyone else is a drone and he's the only one who has it "figured out."</h3>
-          <p><a href="#" tabindex="1"><b>Read More</b></a></p>
+          <p><a href="#"><b>Read More</b></a></p> <!-- removed table index -->
           <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/bee.jpg?raw=true" alt="A bee on top of a flower" />
         </article>
       </div>
       <div class="column">
         <article>
-          <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/telephone.jpg?raw=true" alt="A red, London telephone booth" />
+          <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/telephone.jpg?raw=true" alt="A red, London telephone booth">
           <div class="info">
             <h3 class="headline">Telephone booths. How is this still a thing?</h3>
             <p>
@@ -261,23 +336,25 @@ article p {
       </div>
     </div>
     <div class="three-col">
+					   
       <div class="tier-header">
         <h2>Recommended</h2>
       </div>
       <div class="columns">
         <article>
-          <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/dog.jpg?raw=true" alt="A dog at a desk looks up at a laptop and mouse" />
+          <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/dog.jpg?raw=true" alt="A dog at a desk looks up at a laptop and mouse">
           <div class="info">
             <h3 class="headline">Turn man's best friend into man's best personal assistant. <a href="#">Read More</a></h3>
           </div>
         </article>
         <article>
-          <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/coffee.jpg?raw=true" alt="A cup of coffee on a table" />
+          <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/coffee.jpg?raw=true" alt="A cup of coffee on a table">
           <div class="info">
             <h3 class="headline">San Franciscans are losing their minds over this third wave, artisanal, fair trade, handcrafted, locavore coffee. <a href="#">Read More</a></h3>
+				
         </article>
         <article>
-          <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/football.jpg?raw=true" alt="A football player hands the ball off to another player" />
+          <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/football.jpg?raw=true" alt="A football player hands the ball off to another player">
           <div class="info">
             <h3 class="headline">Sportsball team scores a touchpoint to win the big race. <a href="#">Read More</a></h3>
           </div>
@@ -293,9 +370,10 @@ article p {
   
   <script>
     function getFocus() {
-      window.open('https://aidaform.com/templates/thank-you-page-with-redirects.html','mywindow').focus()
+      window.open('https://aidaform.com/templates/thank-you-page-with-redirects.html','mywindow').focus();
     }
     </script>
 </body>
 
+	   
 </html>
